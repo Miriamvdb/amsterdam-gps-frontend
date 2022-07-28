@@ -11,3 +11,25 @@
   align-items: center;
   padding: 0rem 1rem;
 }
+
+.homepage-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-1 {
+  width: 10rem;
+  height: 2rem;
+  background-image: linear-gradient(170deg, deepskyblue, rgb(95, 255, 188));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-right: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.icon-white {
+  font-size: 14px;
+  padding-left: 0.25rem;
+}
