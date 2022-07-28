@@ -1,0 +1,13 @@
+.container-doctorschedule {
+  margin: 3rem;
+}
+
+.container-title {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  height: 4rem;
+  background-image: linear-gradient(170deg, deepskyblue, rgb(95, 255, 188));
+  align-items: center;
+  padding: 0rem 1rem;
+}

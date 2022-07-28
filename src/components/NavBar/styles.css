@@ -1,0 +1,23 @@
+.container-navbar {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: deepskyblue;
+  width: 97%;
+  height: 60px;
+  margin-top: 1rem;
+}
+
+.container-links {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: deepskyblue;
+}
