@@ -1,3 +1,4 @@
+import { CurrentInfo } from "../../components";
 import "./styles.css";
 
 const DoctorSchedule = () => {
@@ -6,6 +7,9 @@ const DoctorSchedule = () => {
       <h2 className="container-title" style={{ color: "white" }}>
         Doctor Schedule
       </h2>{" "}
+      <div className="doctorschedule-content">
+        <CurrentInfo />
+      </div>
     </div>
   );
 };
