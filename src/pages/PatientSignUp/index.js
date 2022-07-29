@@ -1,3 +1,4 @@
+import { SignupForm } from "../../components";
 import "./styles.css";
 
 const PatientSignUp = () => {
@@ -6,7 +7,9 @@ const PatientSignUp = () => {
       <h2 className="container-title" style={{ color: "white" }}>
         Patient Sign-up
       </h2>
-      <div className="patient-signup-content"></div>
+      <div className="patient-signup-content">
+        <SignupForm />
+      </div>
     </div>
   );
 };
