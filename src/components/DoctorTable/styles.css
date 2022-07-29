@@ -1,0 +1,14 @@
+.all-doctors {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+
+.doctor-doctor,
+.doctor-availability {
+  flex: 1;
+}
+
+.doctor-email {
+  flex: 2;
+}

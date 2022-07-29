@@ -6,6 +6,7 @@ import {
   PatientDatabase,
   PatientSignUp,
 } from "./pages";
+import "./App.css";
 
 function App() {
   return (
