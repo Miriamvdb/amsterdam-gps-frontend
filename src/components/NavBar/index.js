@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { FiPlus } from "react-icons/fi";
 import "./styles.css";
 
 const NavBar = () => {
@@ -9,7 +10,9 @@ const NavBar = () => {
         style={{ paddingLeft: "3rem", color: "deepskyblue" }}
         to="/"
       >
-        <h1>Amsterdam GPs</h1>
+        <h1>
+          Amsterdam GPs <FiPlus style={{ paddingBottom: "0.75rem" }} />
+        </h1>
       </NavLink>
       <div className="container-links">
         <NavLink

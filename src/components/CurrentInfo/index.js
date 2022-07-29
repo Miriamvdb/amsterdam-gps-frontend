@@ -1,8 +1,7 @@
 const CurrentInfo = () => {
   const today = new Date(),
     day = today.getDay(),
-    time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    time = today.getHours();
 
   // TEST
   //   const todayDay = 5;
