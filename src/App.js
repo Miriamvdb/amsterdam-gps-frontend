@@ -4,6 +4,7 @@ import {
   DoctorSchedule,
   HomePage,
   PatientDatabase,
+  PatientDetails,
   PatientSignUp,
 } from "./pages";
 import "./App.css";
@@ -17,6 +18,10 @@ function App() {
         <Route path="/doctorschedule" element={<DoctorSchedule />} />
         <Route path="/patientsignup" element={<PatientSignUp />} />
         <Route path="/patientdatabase" element={<PatientDatabase />} />
+        <Route
+          path="/patientdatabase/details/:id"
+          element={<PatientDetails />}
+        />
       </Routes>
     </div>
   );

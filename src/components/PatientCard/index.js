@@ -31,7 +31,7 @@ const PatientCard = ({
         </p>
       </div>
       <div className="container-button">
-        <NavLink to={`/patientdetails/${id}`}>
+        <NavLink to={`/patientdatabase/details/${id}`}>
           <button className="button-3">Show details</button>
         </NavLink>
       </div>

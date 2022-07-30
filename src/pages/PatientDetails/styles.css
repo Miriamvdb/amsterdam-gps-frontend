@@ -1,0 +1,38 @@
+.container-patient-details {
+  margin: 3rem;
+}
+
+.patient-details-content {
+  margin-top: 3rem;
+  width: 50%;
+  height: fit-content;
+  margin: 8rem auto;
+}
+
+.name-patientdetails {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+  background-image: linear-gradient(
+    170deg,
+    rgba(0, 191, 255, 0.2),
+    rgb(95, 255, 188, 0.2)
+  );
+}
+
+.info-patientdetails {
+  font-size: 14px;
+}
+
+.title-border {
+  padding-top: 1rem;
+  border-top: 1px deepskyblue solid;
+}
+
+.backlink {
+  color: deepskyblue;
+}
+
+.backlink:hover {
+  color: rgb(95, 255, 188);
+}
