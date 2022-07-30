@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { CurrentInfo, DoctorTable } from "../../components";
+import { CurrentInfo, DoctorTable, Loading } from "../../components";
 import axios from "axios";
 import "./styles.css";
 
 const DoctorSchedule = () => {
-  const [doctorList, setDoctorList] = useState([]);
+  const [doctorList, setDoctorList] = useState(null);
 
   useEffect(() => {
     const getAllDoctors = async () => {
@@ -30,29 +30,31 @@ const DoctorSchedule = () => {
         <div className="container-doctortable">
           <div className="titles">
             <div className="title1">
-              <b>DOCTOR</b>
+              <h3>Doctor</h3>
             </div>
             <div className="title2">
-              <b>EMAIL</b>
+              <h3>Email</h3>
             </div>
             <div className="title3">
-              <b>AVAILABILITY</b>
+              <h3>Availability</h3>
             </div>
           </div>
-          {doctorList
-            ? doctorList.map((doctor, index) => {
-                return (
-                  <div key={index}>
-                    <DoctorTable
-                      id={doctor.id}
-                      doctor={doctor.doctor}
-                      email={doctor.email}
-                      onDuty={doctor.onDuty}
-                    />
-                  </div>
-                );
-              })
-            : "Loading.."}
+          {doctorList ? (
+            doctorList.map((doctor, index) => {
+              return (
+                <div key={index}>
+                  <DoctorTable
+                    id={doctor.id}
+                    doctor={doctor.doctor}
+                    email={doctor.email}
+                    onDuty={doctor.onDuty}
+                  />
+                </div>
+              );
+            })
+          ) : (
+            <Loading />
+          )}
         </div>
       </div>
       <CurrentInfo />

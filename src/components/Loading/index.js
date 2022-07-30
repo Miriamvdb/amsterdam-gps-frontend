@@ -9,6 +9,8 @@ const Loading = () => {
         <Spinner style={{ color: "deepskyblue" }}>
           <span className="sr-only">
             <FiPlus />
+            <FiPlus />
+            <FiPlus />
           </span>
         </Spinner>
       </h1>

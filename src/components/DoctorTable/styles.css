@@ -6,9 +6,9 @@
 
 .doctor-doctor,
 .doctor-availability {
-  flex: 1;
+  flex: 2;
 }
 
 .doctor-email {
-  flex: 2;
+  flex: 3;
 }
