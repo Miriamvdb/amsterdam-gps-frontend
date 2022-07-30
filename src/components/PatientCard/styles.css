@@ -1,0 +1,38 @@
+.container-patientcard {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.name-patient {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+  background-image: linear-gradient(
+    170deg,
+    rgba(0, 191, 255, 0.2),
+    rgb(95, 255, 188, 0.2)
+  );
+}
+
+.info-patient {
+  font-size: 14px;
+}
+
+.container-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.button-3 {
+  width: 7rem;
+  height: 2rem;
+  background-image: linear-gradient(170deg, deepskyblue, rgb(95, 255, 188));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-top: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+}
