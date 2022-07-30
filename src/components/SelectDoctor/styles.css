@@ -1,0 +1,10 @@
+.select-doctor {
+  background-color: white;
+  width: 8rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  border: 1px solid deepskyblue;
+  color: deepskyblue;
+}

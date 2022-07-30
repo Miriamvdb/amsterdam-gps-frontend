@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Loading } from "../../components";
+import { Loading, SelectDoctor } from "../../components";
 import { PatientCard } from "../../components/PatientCard";
 import "./styles.css";
 
 const PatientDatabase = () => {
-  const [patientList, setPatientList] = useState(null);
+  const [patientList, setPatientList] = useState([]);
+  const [selectDoctor, setSelectDoctor] = useState("");
 
   useEffect(() => {
     const getAllPatients = async () => {
@@ -21,9 +22,14 @@ const PatientDatabase = () => {
   }, []);
 
   // Feature 5 - change sorting on ABC
-  const sortedPatients = [...patientList].sort((patientA, patientB) =>
-    patientA.lastName.localeCompare(patientB.lastName)
-  );
+  const sortedPatients = [...patientList]
+    .sort((patientA, patientB) =>
+      patientA.lastName.localeCompare(patientB.lastName)
+    )
+    .filter(
+      (patient) =>
+        selectDoctor.length === 0 || selectDoctor.includes(patient.doctorId)
+    );
 
   return (
     <div className="container-patient-database">
@@ -31,6 +37,10 @@ const PatientDatabase = () => {
         Patient Database
       </h2>{" "}
       <div className="patient-database-content">
+        <SelectDoctor
+          selectDoctor={selectDoctor}
+          setSelectDoctor={setSelectDoctor}
+        />
         <div className="all-patientcards">
           {sortedPatients ? (
             sortedPatients.map((patient, index) => (
@@ -42,6 +52,7 @@ const PatientDatabase = () => {
                   lastName={patient.lastName}
                   gender={patient.gender}
                   dateOfBirth={patient.dateOfBirth}
+                  doctorId={patient.doctorId}
                 />
               </div>
             ))

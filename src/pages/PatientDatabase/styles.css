@@ -2,10 +2,14 @@
   margin: 3rem;
 }
 
+.patient-database-content {
+  margin-top: 3rem;
+}
+
 .all-patientcards {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 5rem 3rem;
-  margin: 3rem 0rem;
+  margin: 1rem 0rem;
 }
