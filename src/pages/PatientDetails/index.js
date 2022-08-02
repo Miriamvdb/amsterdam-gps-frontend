@@ -24,56 +24,54 @@ const PatientDetails = () => {
     getPatients();
   }, [params.id]);
 
+  if (!patient) return <Loading />;
+
   return (
     <div className="container-patient-details">
       <h2 className="container-title" style={{ color: "white" }}>
         Patient Details
       </h2>{" "}
-      {patient ? (
-        <div className="patient-details-content">
-          <div className="name-patientdetails">
-            <h2>
-              {patient.firstName} {patient.lastName}
-            </h2>
-          </div>
-          <div className="info-patientdetails">
-            <p>
-              <b>Id: </b>
-              {patient.idnr}
-            </p>
-            <p>
-              <b>Gender: </b>
-              {patient.gender}
-            </p>
-            <p>
-              <b>Date of birth: </b>
-              {patient.dateOfBirth}
-            </p>
-            <h3 className="title-border">Contact details</h3>
-            <p>
-              <b>Email: </b>
-              {patient.email}
-            </p>
-            <p>
-              <b>Phone number: </b>
-              {patient.phoneNumber}
-            </p>
-            <h3 className="title-border">Prescriptions</h3>
-            <div>
-              {patient.prescription.map((prescr, index) => {
-                return <p key={index}>- {prescr}</p>;
-              })}
-            </div>
-          </div>
-          <NavLink to="/patientdatabase">
-            <h2 className="backlink">
-              <FiChevronsLeft />
-            </h2>
-          </NavLink>
+      <div className="patient-details-content">
+        <div className="name-patientdetails">
+          <h2>
+            {patient.firstName} {patient.lastName}
+          </h2>
         </div>
-      ) : (
-        <Loading />
-      )}
+        <div className="info-patientdetails">
+          <p>
+            <b>Id: </b>
+            {patient.idnr}
+          </p>
+          <p>
+            <b>Gender: </b>
+            {patient.gender}
+          </p>
+          <p>
+            <b>Date of birth: </b>
+            {patient.dateOfBirth}
+          </p>
+          <h3 className="title-border">Contact details</h3>
+          <p>
+            <b>Email: </b>
+            {patient.email}
+          </p>
+          <p>
+            <b>Phone number: </b>
+            {patient.phoneNumber}
+          </p>
+          <h3 className="title-border">Prescriptions</h3>
+          <div>
+            {patient.prescription.map((prescr, index) => {
+              return <p key={index}>- {prescr}</p>;
+            })}
+          </div>
+        </div>
+        <NavLink to="/patientdatabase">
+          <h2 className="backlink">
+            <FiChevronsLeft />
+          </h2>
+        </NavLink>
+      </div>
     </div>
   );
 };
