@@ -10,6 +10,7 @@ const SignupForm = () => {
   const [phoneNumber, setPhoneNumer] = useState("");
   const [gender, setGender] = useState(0);
   const [dateOfBirth, setDateOfBirth] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const submitSignup = async (event) => {
     console.log("Hi, you're signed up! :)");
@@ -24,6 +25,11 @@ const SignupForm = () => {
         dateOfBirth: dateOfBirth,
       });
       console.log(response.data);
+
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 3000);
     } catch (e) {
       console.log(e.message);
     }
@@ -32,6 +38,13 @@ const SignupForm = () => {
   return (
     <div className="container-signupform">
       <h2>Welcome! Create an account</h2>
+      <div className={showSuccess ? "show-success" : "hide-success"}>
+        <p>
+          <b style={{ color: "rgb(95, 255, 188)" }}>
+            You're succesfully signed up!
+          </b>
+        </p>
+      </div>
       <form onSubmit={submitSignup}>
         <input
           className="input-signup"

@@ -51,3 +51,11 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.show-success {
+  display: block;
+}
+
+.hide-success {
+  display: none;
+}
